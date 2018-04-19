@@ -20,7 +20,7 @@ const setCategories = (categoriesArray) => {
 
 module.exports = {
   getCategories,
-  getMovieElements,
   setCategories,
-  setMovieElements,
 };
+// setMovieElements, (export this)
+// getMovieElements, (export this)
