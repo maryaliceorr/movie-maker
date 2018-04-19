@@ -6,4 +6,6 @@ const loadCategories = (loadfunction, errorfunction) => {
   myRequest.send();
 };
 
-module.exports = loadCategories;
+module.exports = {
+  loadCategories,
+};
