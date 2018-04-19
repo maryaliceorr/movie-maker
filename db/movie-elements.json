@@ -1,0 +1,20 @@
+{
+  "movie elements": [
+      {
+      "id": "1",
+      "categoryName": "Actors and Actresses"
+      },
+      {
+        "id": "2",
+        "categoryName": "Animals + Trainers"
+    },
+    {
+      "id": "3",
+      "categoryId": "Locations"
+    },
+    {
+      "id": "4",
+      "categoryId": "Special Effects"
+    }
+  ]
+}
