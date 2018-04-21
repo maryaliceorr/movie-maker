@@ -1,26 +1,26 @@
 let categories = [];
-// let movieElements = [];
+let movieElements = [];
 
 const getCategories = () => {
   return categories;
 };
 
-// const getMovieElements = () => {
-//   return movieElements;
-// };
+const getMovieElements = () => {
+  return movieElements;
+};
 
 const setCategories = (categoriesArray) => {
   categories = categoriesArray;
 };
 
-// const setMovieElements = (movieElementsArray) => {
-//   movieElements = movieElementsArray;
+const setMovieElements = (movieElementsArray) => {
+  movieElements = movieElementsArray;
 
-// }
+};
 
 module.exports = {
   getCategories,
   setCategories,
+  setMovieElements,
+  getMovieElements,
 };
-// setMovieElements, (export this)
-// getMovieElements, (export this)
