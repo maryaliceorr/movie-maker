@@ -13,6 +13,7 @@ const whenCategoriesLoad = function () {
 const whenElementsLoad = function () {
   const elementsData = JSON.parse(this.responseText).movieElements;
   data.setMovieElements(elementsData);
+  console.log('elementsData', elementsData);
   elementsDom.printToDomElements(elementsData);
 };
 
