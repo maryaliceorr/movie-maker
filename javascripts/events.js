@@ -11,6 +11,10 @@ const checkboxClicked = (e) => {
 
       const movieSelections = data.getMovieElementSelections();
       elementsDom(movieSelections);
+
+      const budget = data.getBudget() - data.getMovieElementCost();
+      const budgetHolderOutputDiv = document.getElementById('budget-amount');
+      budgetHolderOutputDiv.innerHTML = `$${budget}`;
     };
   });
   // console.log('you clicked it');
@@ -28,7 +32,7 @@ const budgetSubmitClicked = (e) => {
   e.preventDefault();
   const getbudget = document.getElementById('budget-input').value;
   data.setBudget(getbudget);
-  const budget = data.getBudget();
+  const budget = data.getBudget() - data.getMovieElementCost();
   const budgetHolderOutputDiv = document.getElementById('budget-amount');
   budgetHolderOutputDiv.innerHTML = `$${budget}`;
 };
