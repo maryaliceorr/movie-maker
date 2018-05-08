@@ -16,9 +16,9 @@ const categoryCard = (categoryItems, elementItems) => {
     domStrang +=      `<div class="row">`;
     elementItems.forEach((elementItem) => {
       if (categoryItem.id === elementItem.categoryId) {
-        domStrang +=    `<div class=" panel-body col-sm-4">`;
+        domStrang +=    `<div class="checkbox-holder panel-body col-sm-4">`;
         domStrang +=      `<div class="elements form-check">`;
-        domStrang +=      `<input id="${elementItem.id} class="form-check-input lg" type="checkbox" id="defaultCheck1">`;
+        domStrang +=      `<input id="${elementItem.id}" class="form-check-input lg" type="checkbox" id="defaultCheck1">`;
         domStrang +=      `<label class="form-check-label" for="defaultCheck1">${elementItem.name}</label>`;
         domStrang +=      `</div>`;
         domStrang +=    `</div>`;

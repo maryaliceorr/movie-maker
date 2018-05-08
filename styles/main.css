@@ -12,6 +12,7 @@ body {
 
 .inner-body {
   margin-top: 250px;
+  margin-left: 20px;
 }
 .center {
   display: flex;
@@ -21,6 +22,7 @@ body {
 
 .progress {
   width: 90%;
+  margin-left: 5px;
 }
 
 .progress-bar {
@@ -41,10 +43,26 @@ body {
   font-size: 18px;
 }
 
-#categories-holder {
-  width: 70%;
-}
-
 .form-check-label {
   margin: 5px;
+}
+
+.btn {
+  background-color: darkred;
+}
+
+.form-control {
+  height: 30px;
+}
+
+#budget-holder {
+  height: 1075px;
+  background-color: white;
+  color: darkred;
+  margin-left: 50px;
+}
+
+#budget-amount {
+  color: limegreen;
+  font-size: 30px;
 }
