@@ -1,20 +1,18 @@
-// const elementsOutputDiv = document.getElementById('elements-holder');
+const elementSelectionOutputDiv = document.getElementById('element-selection-holder');
 
-// const elementList = (category) => {
-//   let domStrang = '';
-//   elements.forEach((element) => {
-//     domStrang += `<div class="elements form-check">`;
-//     domStrang += `<input class="form-check-input" type="checkbox" id="defaultCheck1">`;
-//     domStrang += `<label class="form-check-label" for="defaultCheck1">${element.name}</label>`;
-//     domStrang += `</div>`;
-//   });
-//   return domStrang;
-// };
+const displaySelections = (selections) => {
+  let domStrang = '';
+  selections.forEach((selection) => {
+    domStrang += `<div>`;
+    domStrang += `<h4>${selection.name}</h4>`;
+    domStrang += `<h6>$${selection.cost}</h6>`;
+    domStrang += `</div>`;
+  });
+  return domStrang;
+};
 
-// const printToDomElements = (elements) => {
-//   elementsOutputDiv.innerHTML = elementList(elements);
-// };
+const printToDomElements = (selections) => {
+  elementSelectionOutputDiv.innerHTML = displaySelections(selections);
+};
 
-// module.exports = {
-//   printToDomElements,
-// };
+module.exports = printToDomElements;

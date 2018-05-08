@@ -2,6 +2,7 @@ const data = require('./data');
 const categories = require('./categories');
 const movieElements = require('./movieElements');
 const mainDom = require ('./mainDom');
+const events = require ('./events');
 
 const whenCategoriesLoad = function () {
   const categoriesData = JSON.parse(this.responseText).categories;
@@ -13,6 +14,8 @@ const whenElementsLoad = function () {
   const elementsData = JSON.parse(this.responseText).movieElements;
   data.setMovieElements(elementsData);
   mainDom.printToDomMain();
+  events.eventListenerAdd();
+  events.getBudgetListener();
 };
 
 const nope = function () {

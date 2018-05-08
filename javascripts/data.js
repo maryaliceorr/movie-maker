@@ -1,21 +1,47 @@
 let categories = [];
 let movieElements = [];
+let cost = 0;
+const movieSelectionsArray = [];
+let budget = 0;
 
 const getCategories = () => {
   return categories;
-};
-
-const getMovieElements = () => {
-  return movieElements;
 };
 
 const setCategories = (categoriesArray) => {
   categories = categoriesArray;
 };
 
+const getMovieElements = () => {
+  return movieElements;
+};
+
 const setMovieElements = (movieElementsArray) => {
   movieElements = movieElementsArray;
+};
 
+const getMovieElementCost = () => {
+  return cost;
+};
+
+const setMovieElementCost = (movieCost) => {
+  cost += movieCost * 1;
+};
+
+const setMovieElementSelections = (movieSelection) => {
+  movieSelectionsArray.push(movieSelection);
+};
+
+const getMovieElementSelections = () => {
+  return movieSelectionsArray;
+};
+
+const setBudget = (budgetInput) => {
+  budget = budgetInput;
+};
+
+const getBudget = () => {
+  return budget;
 };
 
 module.exports = {
@@ -23,4 +49,10 @@ module.exports = {
   setCategories,
   setMovieElements,
   getMovieElements,
+  setMovieElementCost,
+  getMovieElementCost,
+  setMovieElementSelections,
+  getMovieElementSelections,
+  getBudget,
+  setBudget,
 };
