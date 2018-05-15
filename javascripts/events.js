@@ -15,11 +15,13 @@ const budgetSubmitClicked = (e) => {
 
 const checkboxClicked = (e) => {
   // callback function after you have clicked
+
   const elementsData = data.getMovieElements();
   elementsData.forEach((element) => {
     if (element.id === e.target.id) {
       data.setMovieElementCost(element.cost);
       data.setMovieElementSelections(element);
+      console.log(e.target.checked, 'e.target.checked');
 
       const movieSelections = data.getMovieElementSelections();
       elementsDom(movieSelections);

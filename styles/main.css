@@ -73,3 +73,19 @@ body {
 .green {
   color: limegreen;
 }
+
+.per25 {
+  width: 25%;
+}
+
+.per50 {
+  width: 50%;
+}
+
+.per75 {
+  width: 75%;
+}
+
+.per100 {
+  width: 100%;
+}

@@ -1,8 +1,9 @@
 const data = require('./data');
 const categories = require('./categories');
 const movieElements = require('./movieElements');
-const mainDom = require ('./mainDom');
-const events = require ('./events');
+const mainDom = require('./mainDom');
+const events = require('./events');
+const progressBar = require('./progressBar');
 
 const whenCategoriesLoad = function () {
   const categoriesData = JSON.parse(this.responseText).categories;
@@ -16,6 +17,7 @@ const whenElementsLoad = function () {
   mainDom.printToDomMain();
   events.eventListenerAdd();
   events.getBudgetListener();
+  progressBar();
 };
 
 const nope = function () {
