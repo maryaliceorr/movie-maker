@@ -1,18 +1,18 @@
-const progressBarChange = (choices) => {
-  const progressBar = document.getElementById('progress');
-  const chosenCategories = [... new Set(choices.map(item => item.categoryId)),];
-  if (chosenCategories.length === 1) {
-    progressBar.classList.add('per25');
-  } else if (chosenCategories.length === 2) {
-    progressBar.classList.remove('per25');
-    progressBar.classList.add('per50');
-  } else if (chosenCategories.length === 3) {
-    progressBar.classList.remove('per25', 'per50');
-    progressBar.classList.add('per75');
-  } else if (chosenCategories.length >= 4) {
-    progressBar.classList.remove('per25', 'per50', 'per75');
-    progressBar.classList.add('per100');
+const progressBarChange = () => {
+  let progressBarLength = [];
+  const checkboxes = document.getElementsByClassName('checkbox-yeah');
+  for (let i = 0; i < checkboxes.length; i++) {
+    // console.log(checkboxes[i].checked, 'checkbox');
+    // console.log(checkboxes[i].classList.value.split(' ')[0], 'checkbox');
+    if (checkboxes[i].checked) {
+      progressBarLength.push(checkboxes[i].classList.value.split(' ')[0]);
+    }
   };
+  progressBarLength = progressBarLength.filter((x, i, a) => a.indexOf(x) === i);
+  // console.log('progressBarLength', progressBarLength);
+  const progressBar = document.getElementById('progress');
+  progressBar.style.width = `${progressBarLength.length * 25}%`;
+  progressBar.innerHTML = `${progressBarLength.length * 25}%`;
 };
 
 module.exports = progressBarChange;
