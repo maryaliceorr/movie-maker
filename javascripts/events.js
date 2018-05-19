@@ -1,5 +1,6 @@
 const data = require('./data');
 const elementsDom = require('./elementsDom');
+const progressBarChange = require('./progressBar');
 
 const movieStatementHolder = document.getElementById('movie-statement');
 
@@ -13,6 +14,8 @@ const budgetSubmitClicked = (e) => {
   budgetHolderOutputDiv.classList.add('green');
 };
 
+const movieElementChoices = [];
+
 const checkboxClicked = (e) => {
   // callback function after you have clicked
 
@@ -21,7 +24,6 @@ const checkboxClicked = (e) => {
     if (element.id === e.target.id) {
       data.setMovieElementCost(element.cost);
       data.setMovieElementSelections(element);
-      console.log(e.target.checked, 'e.target.checked');
 
       const movieSelections = data.getMovieElementSelections();
       elementsDom(movieSelections);
@@ -29,6 +31,8 @@ const checkboxClicked = (e) => {
       const budget = data.getBudget() - data.getMovieElementCost();
       const budgetHolderOutputDiv = document.getElementById('budget-amount');
       budgetHolderOutputDiv.innerHTML = `$${budget}`;
+
+      progressBarChange(movieElementChoices);
 
       if (budget < 0) {
         // && progressBar === '100%')
