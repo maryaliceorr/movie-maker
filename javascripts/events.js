@@ -14,8 +14,6 @@ const budgetSubmitClicked = (e) => {
   budgetHolderOutputDiv.classList.add('green');
 };
 
-const movieElementChoices = [];
-
 const checkboxClicked = (e) => {
   // callback function after you have clicked
 
@@ -32,8 +30,6 @@ const checkboxClicked = (e) => {
       const budgetHolderOutputDiv = document.getElementById('budget-amount');
       budgetHolderOutputDiv.innerHTML = `$${budget}`;
 
-      progressBarChange(movieElementChoices);
-
       if (budget < 0) {
         // && progressBar === '100%')
         budgetHolderOutputDiv.classList.remove('green');
@@ -49,6 +45,7 @@ const checkboxClicked = (e) => {
   });
   // console.log('you clicked it');
   // console.log(typeof e.target.id);
+  progressBarChange();
 };
 
 const eventListenerAdd = () => {
