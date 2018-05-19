@@ -32,6 +32,13 @@ const setMovieElementSelections = (movieSelection) => {
   movieSelectionsArray.push(movieSelection);
 };
 
+const removeMovieElementsSelections = (movieSelection) => {
+  const stuffToRemove = movieSelectionsArray.map((x) => {
+    return x.id;
+  }).indexOf(movieSelection.id);
+  movieSelectionsArray.splice(stuffToRemove, 1);
+};
+
 const getMovieElementSelections = () => {
   return movieSelectionsArray;
 };
@@ -55,4 +62,5 @@ module.exports = {
   getMovieElementSelections,
   getBudget,
   setBudget,
+  removeMovieElementsSelections,
 };
