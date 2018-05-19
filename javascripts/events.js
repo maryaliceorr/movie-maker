@@ -16,36 +16,45 @@ const budgetSubmitClicked = (e) => {
 
 const checkboxClicked = (e) => {
   // callback function after you have clicked
-
+  const progressBar = document.getElementById('progress');
+  const budgetHolderOutputDiv = document.getElementById('budget-amount');
+  let budget = 0;
   const elementsData = data.getMovieElements();
   elementsData.forEach((element) => {
     if (element.id === e.target.id) {
-      data.setMovieElementCost(element.cost);
-      data.setMovieElementSelections(element);
-
+      if (e.target.checked) {
+        data.setMovieElementSelections(element);
+        data.setMovieElementCost(element.cost);
+      } else {
+        data.setMovieElementCost(element.cost * -1);
+        data.removeMovieElementsSelections(element);
+      };
+      budget = data.getBudget() - data.getMovieElementCost();
       const movieSelections = data.getMovieElementSelections();
       elementsDom(movieSelections);
 
-      const budget = data.getBudget() - data.getMovieElementCost();
-      const budgetHolderOutputDiv = document.getElementById('budget-amount');
       budgetHolderOutputDiv.innerHTML = `$${budget}`;
-
-      if (budget < 0) {
-        // && progressBar === '100%')
-        budgetHolderOutputDiv.classList.remove('green');
-        budgetHolderOutputDiv.classList.add('red');
-        movieStatementHolder.classList.add('red');
-        movieStatementHolder.innerHTML = 'You cannot make this movie yet.';
-      } else {
-        budgetHolderOutputDiv.classList.add('green');
-        movieStatementHolder.innerHTML = 'Congrats, you can make this movie!';
-        movieStatementHolder.classList.add('green');
-      }
     };
   });
   // console.log('you clicked it');
   // console.log(typeof e.target.id);
   progressBarChange();
+  if (budget < 0) {
+    // && progressBar === '100%')
+    budgetHolderOutputDiv.classList.remove('green');
+    budgetHolderOutputDiv.classList.add('red');
+    movieStatementHolder.classList.add('red');
+    movieStatementHolder.innerHTML = 'You cannot make this movie yet.';
+  } else if (budget > 0 && (progressBar.innerHTML === '100%')) {
+    budgetHolderOutputDiv.classList.add('green');
+    movieStatementHolder.innerHTML = 'Congrats, you can make this movie!';
+    movieStatementHolder.classList.add('green');
+  } else if (budget > 0 && (progressBar.innerHTML !== '100%')) {
+    budgetHolderOutputDiv.classList.add('green');
+    movieStatementHolder.innerHTML = 'You cannot make this movie yet.';
+    movieStatementHolder.classList.add('red');
+    movieStatementHolder.classList.remove('green');
+  }
 };
 
 const eventListenerAdd = () => {
