@@ -4,10 +4,10 @@
 Create a movie maker that shows whether the film you are trying to make is on budget based on the actors,effects, animals and locations chosen. It also shows the status of your budget as you choose the options for the movie.
 
 ## Screenshots
-![Movie Maker Screenshot 1]()
-![Movie Maker Screenshot 2]()
-![Movie Maker Screenshot 3]()
-![Movie Screenshot 4]()
+![Movie Maker Screenshot 1](https://raw.githubusercontent.com/maryaliceorr/movie-maker/master/images/screenshot1.png)
+![Movie Maker Screenshot 2](https://raw.githubusercontent.com/maryaliceorr/movie-maker/master/images/screenshot2.png)
+![Movie Maker Screenshot 3](https://raw.githubusercontent.com/maryaliceorr/movie-maker/master/images/screenshot3.png)
+![Movie Screenshot 4](https://raw.githubusercontent.com/maryaliceorr/movie-maker/master/images/screenshot4.png)
 
 ## Instructions
 - Clone down this repo and CD into project.
