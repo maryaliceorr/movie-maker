@@ -7,7 +7,6 @@ let movieElements = [];
 
 const categoryCard = (categoryItems, elementItems) => {
   let domStrang = '';
-  console.log('hi');
   categoryItems.forEach((categoryItem) => {
     domStrang += `<div class="panel">`;
     domStrang +=  `<div class="panel-heading">`;

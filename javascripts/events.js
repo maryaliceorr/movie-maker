@@ -15,7 +15,6 @@ const budgetSubmitClicked = (e) => {
 };
 
 const checkboxClicked = (e) => {
-  // callback function after you have clicked
   const progressBar = document.getElementById('progress');
   const budgetHolderOutputDiv = document.getElementById('budget-amount');
   let budget = 0;
@@ -36,11 +35,8 @@ const checkboxClicked = (e) => {
       budgetHolderOutputDiv.innerHTML = `$${budget}`;
     };
   });
-  // console.log('you clicked it');
-  // console.log(typeof e.target.id);
   progressBarChange();
   if (budget < 0) {
-    // && progressBar === '100%')
     budgetHolderOutputDiv.classList.remove('green');
     budgetHolderOutputDiv.classList.add('red');
     movieStatementHolder.classList.add('red');

@@ -1,7 +1,7 @@
 # Movie Maker
 
 ## Description
-Create a movie maker that shows whether the film you are trying to make is on budget based on the actors, effects, animals and locations chosen. It also shows the status of your budget as you choose the options for the movie.
+Create a movie maker that shows whether the film you are trying to make is on budget based on the actors,effects, animals and locations chosen. It also shows the status of your budget as you choose the options for the movie.
 
 ## Screenshots
 ![Movie Maker Screenshot 1]()
@@ -10,7 +10,9 @@ Create a movie maker that shows whether the film you are trying to make is on bu
 ![Movie Screenshot 4]()
 
 ## Instructions
-1. Clone down this repo, and cd into project
-2. Install http-server plugin via npm
-3. In your terminal: hs -p 9999
-4. In your browser navigation to: localhost:7001
+- Clone down this repo and CD into project.
+- Install the http-server plugin via npm.
+- CD into the lib directory and run npm install via command line.
+- In the lib directory run the command grunt.
+- CD to the root of the directory and run in separate terminal tab: hs -p 9999.
+- navigate to localhost:9999 in browser.
